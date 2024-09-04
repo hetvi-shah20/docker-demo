@@ -16,3 +16,4 @@ EXPOSE 8081
 COPY --from=build /target/docker-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]
 
+#This set of commands will help us to deploy our spring boot application to render.com platform for free.
