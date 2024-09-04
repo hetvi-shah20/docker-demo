@@ -14,7 +14,7 @@ RUN apt-get update && \
     apt-get install -y ant && \
     apt-get clean;
 COPY . .
-RUN mvn clean package
+RUN ./mvnw clean install
 
 FROM openjdk:17-jdk-alpine
 EXPOSE 8081
