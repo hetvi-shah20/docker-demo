@@ -9,7 +9,10 @@
 # to generate docker image on serve we will need seperate set of intruction
 FROM ubuntu:latest As build
 RUN apt-get update
-RUN apt-get install openjdk:17-jdk -y
+RUN apt-get update && \
+    apt-get install -y openjdk-17-jdk && \
+    apt-get install -y ant && \
+    apt-get clean;
 COPY . .
 RUN ./mvnw spring-boot:build-image
 
