@@ -14,7 +14,7 @@ RUN apt-get update && \
     apt-get install -y ant && \
     apt-get clean;
 COPY . .
-RUN ./mvnw spring-boot:build-image
+RUN mvn clean package
 
 FROM openjdk:17-jdk-alpine
 EXPOSE 8081
