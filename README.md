@@ -13,7 +13,7 @@
 
 ``` mvn clean install ```
 
-<li>To create a docker image from the jar file hit the below command in your terminal</li>
+<li>To create a docker image from the jar file hit the below command</li>
 
 ```docker build -t your-image-name .```
 <li>To run your docker image run the below command</li>
