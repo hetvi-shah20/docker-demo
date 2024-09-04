@@ -1,0 +1,22 @@
+version: '3.8'  # Specifies the Docker Compose file format version
+
+services:
+  my-docker-project:
+    container_name: my-docker-container
+    image: docker-demo-rest-app:latest
+    ports:
+      - "9091:8081"
+
+# image tag has a name of the docker image which we will create using Dockerfile i will use name 'docker-demo-rest-app'
+# 8081 is internal port and 9091 is external port
+
+  my-other-project:
+    container_name: my-second-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9092:8081"
+
+
+# This is another way to create container . this will follow the instruction from dockerfile directly.
